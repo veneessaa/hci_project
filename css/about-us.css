@@ -1,0 +1,324 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #0c0c0c;
+  --header-color: #111111;
+  --font-color-main: #d6d6d6;
+  --font-color-basic: #fff;
+  --color2: #e7eca1;
+  --color3: #5b5959;
+  --color4: #252525;
+  --main-color: #e5ce03;
+
+  --big-font: 5rem;
+  --sec-font: 3rem;
+  --sub-title: 2.2rem;
+  --p-font: 1rem;
+  --p2-font: 1.5rem;
+  --inside-font: 0.9rem;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--header-color);
+  padding: 25px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .5s ease;
+  box-shadow: var(--main-color) 0px 10px 10px -8px;
+}
+
+.logo {
+  font-size: var(--sub-title);
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+}
+
+.navlist a {
+  display: inline-block;
+  margin: 0 35px;
+  color: var(--font-color-main);
+  font-size: var(--p-font);
+  transition: all .5s ease;
+  text-align: center;
+}
+
+.navlist .active, .navlist a:hover {
+  color: var(--color2);
+  text-shadow: 3px 3px 15px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: var(--color2);
+  font-size: var(--p-font);
+  font-weight: 600;
+  color: var(--bg-color);
+  border-radius: 10px;
+  margin-right: 12px;
+  transition: all .5s ease;
+}
+
+.btn:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 10px var(--color2);
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  z-index: 10001;
+  cursor: pointer;
+  object-fit: cover;
+  display: none;
+}
+
+header.sticky {
+  padding: 16px 10%;
+}
+
+.about-us {
+  padding: 175px 10% 85px;
+  position: relative;
+  background: linear-gradient(to bottom, var(--color3), var(--header-color));
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, auto));
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.about-image img, .history-image img  {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.history-founders {
+  padding: 85px 10%;
+  position: relative;
+  background: linear-gradient(to bottom, var(--color3), var(--header-color));
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, auto));
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.about-content h2 {
+  color: var(--main-color);
+  font-size: var(--sub-title);
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 3px 3px var(--bg-color);
+}
+
+.history-content h2 {
+  color: var(--main-color);
+  font-size: var(--sub-title);
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-align: justify;
+  text-shadow: 3px 3px var(--bg-color);
+}
+
+.about-content p, .history-content p {
+  width: 100%;
+  max-width: 1000px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--font-color-basic);
+  line-height: 27px;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.about-content h4 {
+  color: var(--color2);
+  font-size: 18px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.history-content li {
+  color: var(--color2);
+  font-size: 15px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.about-image, .history-image, .about-content, .history-content {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+footer {
+  padding : 30px 10%;
+  background: var(--color3);
+}
+
+footer h1 {
+  color: var(--main-color);
+  text-shadow: 1px 1px 1px var(--bg-color);
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.footer-container {
+  text-align: center;
+}
+
+.footer-container h1 {
+  display: flex;
+  color: var(--main-color);
+  font-size: var(--sub-title);
+  transition: all .40s ease;
+  text-shadow: 3px 3px var(--bg-color);
+}
+
+.footer-container h4 {
+  margin-bottom: 16px;
+  display: block;
+  color: var(--main-color);
+  font-size: 17px;
+  font-weight: 400;
+  transition: all .40s ease;
+  text-shadow: 1px 1px var(--bg-color);
+}
+
+.footer-container li {
+  margin-bottom: 12px;
+}
+
+.footer-container li a {
+  display: block;
+  color: var(--font-color-basic);
+  font-size: 14px;
+  font-weight: 400;
+  transition: all .40s ease;
+  text-shadow: 1.5px 1.5px var(--bg-color);
+}
+
+.footer-container li a:hover {
+  transform: translateY(-2px);
+  color: var(--color2);
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+  padding: 18px 0;
+}
+
+.footer-icons a img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.footer-icons a img:hover {
+  transform: scale(1.1);
+}
+
+@media(max-width:1000px) {
+  header {
+    padding: 24px 4%;
+  }
+  .logo {
+    font-size: 25px;
+  }
+  .navlist a {
+    font-size: 14px;
+    margin: 0 25px;
+  }
+  .btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+} 
+
+@media(max-width:768px) {
+  .menu-icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+  }
+  .navlist {
+    position: absolute;
+    top: 10%;
+    right: -100%;
+    width: 33%;
+    height: 46vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 75px;
+    transition: all .6s ease;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, var(--font-color-main), var(--main-color));
+  }
+  .navlist a {
+    display: block;
+    padding: 0;
+    margin: 0px 0px 45px 0px;
+    font-size: var(--p-font);
+    color: var(--bg-color);
+  }
+  .navlist .active, .navlist a:hover {
+    color: var(--color2);
+    text-shadow: 3px 3px 15px var(--bg-color);
+  }
+  .navlist.open{
+    right: 1%;
+  }
+  .footer-container {
+    text-align: justify;
+  }
+}
